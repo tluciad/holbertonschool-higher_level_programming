@@ -4,6 +4,6 @@ def multiple_returns(sentence):
     first = sentence[0]
     tuple1 = (length, first)
     if not sentence:
-        sentence = None
+        sentence[0] = None
     else:
         return tuple1
