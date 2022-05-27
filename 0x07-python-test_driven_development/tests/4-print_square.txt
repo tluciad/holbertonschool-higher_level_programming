@@ -1,0 +1,40 @@
+``The print_square text``
+========================
+``using print_square``
+-------------------------
+first import print_square module
+
+    >>> print_square = __import__('4-print_square').print_square
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(A)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'A' is not defined
+
+    >>> print_square(2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
+
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+    >>> print_square(3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(False)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
