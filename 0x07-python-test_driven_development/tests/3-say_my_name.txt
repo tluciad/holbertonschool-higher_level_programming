@@ -1,0 +1,38 @@
+``The say_my_name text``
+========================
+``using say_my_name``
+------------------------------
+first import say_my_name module
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    >>> say_my_name("Holberton", "School")
+    My name is Holberton School
+
+    >>> say_my_name(3, "Belle")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Albert)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Albert' is not defined
+
+    >>> say_my_name("Albert")
+    My name is Albert 
+
+    >>> say_my_name("Juan", "Alejandro", "Carlos", "Alberto")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 4 were given
+
+    >>> say_my_name("Tania", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("June", [28])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
