@@ -1,0 +1,36 @@
+``The text_identation text``
+========================
+``using text_identation``
+-------------------------
+first import text_identation module
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    
+        
+    >>> text_indentation(56)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation("hello, are you ok?")
+    hello,
+    <BLANKLINE>
+    are you ok?
+    >>> text_indentation("hello")
+    hello
+    
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(Null)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Null' is not defined
+
+    >>> text_indentation("1982")
+    1982
+
+
+    
