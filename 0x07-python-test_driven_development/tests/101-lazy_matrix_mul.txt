@@ -36,4 +36,14 @@ first import lazy_matrix_mul module
 	[[ 7.8  13.14]
 	 [15.   24.9 ]]
 
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4], [8, 2]], [[1, 2], [3, 4]]))
+	[[ 7 10]
+	 [15 22]
+	 [14 24]]
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4, 9]], [[1, 2], [3, 4]]))
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
  	 
