@@ -65,4 +65,5 @@ first import matrix_divide module
     >>> matrix = [[3, 9], [12, 15]]
     >>> matrix_divided(matrix, 2.5)
     [[1.2, 3.6], [4.8, 6.0]]
-    
+
+       
