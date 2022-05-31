@@ -32,5 +32,10 @@ first import text_identation module
     >>> text_indentation("1982")
     1982
 
+    >>> text_indentation("Holberton.School")
+    Holberton.
+    <BLANKLINE>
+    School
+
     
     
