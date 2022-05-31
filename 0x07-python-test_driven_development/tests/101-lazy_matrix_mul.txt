@@ -1,0 +1,39 @@
+``The lazy_matrix_mul text``
+========================
+``using lazy_matrix_mul``
+-------------------------
+first import lazy_matrix_mul module
+
+	>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+    
+	>>> print(lazy_matrix_mul([[1, 2], [-3, 4]], [[1, 2], [3,-4]]))
+	[[  7  -6]
+	 [  9 -22]]
+
+	>>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+	[[13 16]]
+
+	>>> print(lazy_matrix_mul([[]], [[3, 4], [5, 6]]))
+	Traceback (most recent call last):
+	...
+	ValueError: shapes (1,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
+
+	>>> print(lazy_matrix_mul([["hello", "cat"]], [[3, 4], [5, 6]]))
+	Traceback (most recent call last):
+	...
+	TypeError: invalid data type for einsum
+
+	>>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [1]]))
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+	>>> print(lazy_matrix_mul([[1.8, 2], [3, 4]], [[1, 2.3], [3, 4.5]]))
+	[[ 7.8  13.14]
+	 [15.   24.9 ]]
+
+ 	 
