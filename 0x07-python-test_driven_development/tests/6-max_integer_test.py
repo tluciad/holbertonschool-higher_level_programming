@@ -36,11 +36,15 @@ class TestMaxInteger(unittest.TestCase):
         """to check max list with one element"""
         self.assertEqual(max_integer([8]), 8)
     
-    def text_max_integer5(self):
+    def text_max_integer7(self):
         """to check max just negatives integers"""
         self.assertEqual(max_integer([-12, -3, -1, -4]), -1)
         self.assertEqual(max_integer([-7, -2, -5]), -2)
       
+    def text_max_integer8(self):
+        """to check max one negativein list"""
+        self.assertEqual(max_integer([-12, 3, 1, 4]), 4)
+       
 
 
 if __name__ == '__main__':
