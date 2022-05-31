@@ -56,9 +56,13 @@ first import matrix_divide module
     ...
     TypeError: unsupported operand type(s) for /: 'str' and 'int'
 
+    >>> matrix = [[3, 9], [12, 15]]
+    >>> matrix_divided(matrix, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
 
-
-
-
-
+    >>> matrix = [[3, 9], [12, 15]]
+    >>> matrix_divided(matrix, 2.5)
+    [[1.2, 3.6], [4.8, 6.0]]
     
