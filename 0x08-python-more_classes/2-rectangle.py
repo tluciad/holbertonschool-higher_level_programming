@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class Rectangle that defines a rectangle by: (based on 1-rectangle.py)"""
+"""class Rectangle that defines a rectangle by: (based on 2-rectangle.py)"""
 
 
 class Rectangle:
@@ -36,11 +36,9 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """returns the rectangle area"""
         return(self.__height*self.__width)
-
 
     def perimeter(self):
         """ returns the rectangle perimeter"""
