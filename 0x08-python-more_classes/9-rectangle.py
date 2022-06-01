@@ -81,5 +81,9 @@ class Rectangle:
             return rect_1
         elif rect_2.area() >= rect_1.area():
             return rect_2
-    
+
     @classmethod
+    def square(cls, size=0):
+        """Class method returns a new Rectangle instance """
+        return cls(size, size)
+        """a square width == height == size"""
