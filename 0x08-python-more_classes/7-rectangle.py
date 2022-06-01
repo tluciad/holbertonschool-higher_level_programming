@@ -2,8 +2,11 @@
 """class Rectangle that defines a rectangle by: (based on 6-rectangle.py)"""
 
 
+from cmath import rect
+
+
 class Rectangle:
-    """empty class that defines a Rectangle"""
+    """class that defines a Rectangle"""
     number_of_instances = 0
     print_symbol = "#"
 
@@ -52,12 +55,12 @@ class Rectangle:
 
     def __str__(self):
         """should print the rectangle with the character #"""
-        str = ""
+        rec = ""
         if self.__width == 0 or self.__height == 0:
-            return str
+            return rec
         for i in range(self.__height):
-            str += ("#"*self.__width) + "\n"
-        return str[:-1]
+            rec += (str(self.print_symbol) * self.__width) + "\n"
+        return rec[:-1]
 
     def __repr__(self):
         """return a string representation of the rectangle"""
@@ -65,5 +68,5 @@ class Rectangle:
 
     def __del__(self):
         """an instance of Rectangle is deleted"""
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
