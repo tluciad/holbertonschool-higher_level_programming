@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""class Rectangle that defines a rectangle by: (based on 4-rectangle.py)"""
+"""class Rectangle that defines a rectangle by: (based on 5-rectangle.py)"""
 
 
 class Rectangle:
-    """empty class that defines a Rectangle"""
+    """class that defines a Rectangle"""
 
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height"""
