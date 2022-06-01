@@ -2,9 +2,6 @@
 """class Rectangle that defines a rectangle by: (based on 6-rectangle.py)"""
 
 
-from cmath import rect
-
-
 class Rectangle:
     """class that defines a Rectangle"""
     number_of_instances = 0
