@@ -1,0 +1,12 @@
+``The base_geometry text``
+========================
+``using base_geometry``
+------------------------------
+first import base_geometry module
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+    >>> bg.integer_validator("holberton", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: holberton must be greater than 0
