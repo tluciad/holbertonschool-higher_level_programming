@@ -18,18 +18,34 @@ first import my_list module
     >>> issubclass(MyList, list)
     True
 
-    >>> l.print_sorted(1)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> my_list1 = MyList()
+    >>> my_list1.append(-1)
+    >>> my_list1.append(-21)
+    >>> my_list1.append(9)
+    >>> print(my_list1)
+    [-1, -21, 9]
+
+    >>> my_list2 = MyList()
+    >>> print(my_list2)
+    []
+
+    >>> my_list3 = MyList()
+    >>> my_list3.append(a)
     Traceback (most recent call last):
     ...
-    TypeError: print_sorted() takes 1 positional argument but 2 were given
+    NameError: name 'a' is not defined
 
-    >>> l.append(1)
-    >>> l.append(2)
-    >>> l.append(3)
-    >>> l.append(4)
-    >>> print(l)
-    [1, 2, 3, 4]
+    >>> my_list3 = MyList()
+    >>> my_list3.append(156793)
+    >>> my_list3.append(0)
+    >>> my_list3.append(190)
+    >>> print(my_list3)
+    [156793, 0, 190]
 
-    >>> m = __import__("1-my_list").MyList.print_sorted.__doc__
-    >>> len(m) > 1
-    True
+    >>> my_list3.print_sorted()
+    [0, 190, 156793]
+
+
