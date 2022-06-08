@@ -7,4 +7,4 @@ def read_file(filename=""):
     """Prototype of function"""
     with open(filename, 'r', encoding="utf-8") as f:
         """must use the with statement"""
-        print(f.read())
+        print(f.read(), end="")
