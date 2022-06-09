@@ -3,10 +3,10 @@
 
 
 class MyInt(int):
-    def __eq__(self, __o: object) -> bool:
+    def __eq__(self, other):
         """compare equality"""
-        return not super().__eq__(__o)
+        return not super().__eq__(other)
 
-    def __ne__(self, __o: object) -> bool:
+    def __ne__(self, other):
         """compare equality"""
-        return not super().__ne__(__o)
+        return not super().__ne__(other)
