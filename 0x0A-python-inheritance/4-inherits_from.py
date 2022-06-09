@@ -5,5 +5,7 @@ that inherited (directly or indirectly)"""
 
 def inherits_from(obj, a_class):
     """(directly or indirectly) from the specified class"""
-    if type(obj) != a_class:
-        return isinstance(obj, a_class)
+    if type(obj) is a_class or not isinstance(obj, a_class):
+        return False
+    else:
+        return True
