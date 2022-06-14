@@ -76,7 +76,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """prints a rectangle using '#'"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) \
+        {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         if args != None and len(args) != 0:
@@ -86,7 +87,7 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-    
+
     def to_dictionary(self):
         return {'x': self.__x, 'y': self.__y, 'id': self.id,
                 'height': self.__height, 'width': self.__width}
