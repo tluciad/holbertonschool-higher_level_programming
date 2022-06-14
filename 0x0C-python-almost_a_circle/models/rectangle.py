@@ -101,17 +101,13 @@ class Rectangle(Base):
             for key in kwargs:
                 setattr(self, key, kwargs[key])
         else:
-            tupla = [
-                "id",
-                "width",
-                "height",
-                "x",
-                "y"
-            ]
+            tupla = ["id", "width", "height",
+                     "x", "y"]
             for i in range(len(args)):
                 setattr(self, tupla[i], args[i])
 
     def to_dictionary(self):
         """ that returns the JSON string representation of
         list_dictionaries"""
-        return vars(self)
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}

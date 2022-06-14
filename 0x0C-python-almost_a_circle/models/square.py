@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """a class Square that inherits from Rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
         """super class with id, x, y, width and height"""
@@ -41,4 +42,5 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Square by adding the public method
         that returns the dictionary"""
-        return {'id': self.id, 'x': self.x, 'y': self.y, 'size': self.size}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
