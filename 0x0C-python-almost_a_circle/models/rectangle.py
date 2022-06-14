@@ -76,18 +76,24 @@ class Rectangle(Base):
 
     def __str__(self):
         """prints a rectangle using '#'"""
-        return f"[Rectangle] ({self.id}) \
-        {self.x}/{self.y} - {self.width}/{self.height}"
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        if args is not None and len(args) is not 0:
-            list = ['id', 'width', 'height', 'x', 'y']
-            for i in range(len(args)):
-                setattr(self, list[i], args[i])
+        if len(args) == 0:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            tupla = [
+                "id",
+                "width",
+                "height",
+                "x",
+                "y"
+            ]
+            for i in range(len(args)):
+                setattr(self, tupla[i], args[i])
 
     def to_dictionary(self):
-        return {'x': self.__x, 'y': self.__y, 'id': self.id,
-                'height': self.__height, 'width': self.__width}
+        return vars(self)
+        
