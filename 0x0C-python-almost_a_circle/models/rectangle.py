@@ -80,7 +80,7 @@ class Rectangle(Base):
         {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
-        if args != None and len(args) != 0:
+        if args is not None and len(args) is not 0:
             list = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list[i], args[i])
