@@ -109,5 +109,10 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ that returns the JSON string representation of
         list_dictionaries"""
-        return {'x': self.x, 'y': self.y, 'id': self.id,
-                'height': self.height, 'width': self.width}
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+            }
