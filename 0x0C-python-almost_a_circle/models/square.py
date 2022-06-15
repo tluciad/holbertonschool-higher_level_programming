@@ -31,7 +31,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """adding the public method
         that assigns attributes"""
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             list = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list[i], args[i])

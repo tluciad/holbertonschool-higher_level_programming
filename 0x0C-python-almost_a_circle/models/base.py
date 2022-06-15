@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """creating a Base class"""
 import json
+from os import path
 
 
 class Base:
@@ -61,6 +62,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        if path.exists(cls.__name__ + ".json") is False:
+            return []
         list = []
         with open(cls.__name__ + ".json", "r", encoding='utf-8') as f:
             list = cls.from_json_string(f.read())
