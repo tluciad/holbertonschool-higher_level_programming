@@ -1,5 +1,6 @@
 # 0x0E. SQL - More queries
-image.png
+
+![image](https://user-images.githubusercontent.com/98775997/179015334-1feca1cd-e219-47ef-a863-e944ed98ee19.png)
 
 ## Resources
 Read or watch:
@@ -47,3 +48,15 @@ General
 - All SQL keywords should be in uppercase (SELECT, WHERE…)
 - A README.md file, at the root of the folder of the project, is mandatory
 - The length of your files will be tested using wc
+
+## More Info
+Comments for your SQL file:
+```
+$ cat my_script.sql
+-- 3 first students in the Batch ID=3
+-- because Batch 3 is the best!
+SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
+$
+```
+
+![image](https://user-images.githubusercontent.com/98775997/179015391-bb347c7a-6070-472b-8eef-c2861ad7ede4.png)
