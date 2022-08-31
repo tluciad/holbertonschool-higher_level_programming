@@ -6,6 +6,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
+    """module to order sorted in ascending order by states.id"""
+
 
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
