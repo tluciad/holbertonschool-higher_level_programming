@@ -10,13 +10,14 @@ if __name__ == '__main__':
     letter = {'q': ""}
     try:
         letter['q'] = sys.argv[1]
-    except:
+
+    except Exception:
         pass
     r = requests.post('http://0.0.0.0:5000/search_user', letter)
     try:
-        jsonLetter = r.json()
-        if len(jsonLetter.keys()) > 0:
-            print("[{}] {}".format(jsonLetter.get('id'), jsonLetter.get('name')))
+        jsonLet = r.json()
+        if len(jsonLet.keys()) > 0:
+            print("[{}] {}".format(jsonLet.get('id'), jsonLet.get('name')))
         else:
             print("No result")
     except Exception:
