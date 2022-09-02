@@ -3,7 +3,7 @@
 with N (upper N) from the database hbtn_0e_0_usa:"""
 
 if __name__ == '__main__':
-    """module to order the states by id ASC"""
+    """module to order the cities by id ASC"""
 
     import MySQLdb
     import sys
